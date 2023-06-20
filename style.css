@@ -54,9 +54,15 @@ td:nth-child(2n-1) {
     text-align: center;
 }
 
-th:last-child,
-td:last-child {
+th:nth-child(4),
+td:nth-child(4) {
     text-align: end;
+}
+
+.titulo-tabela {
+    text-align: center;
+    color: maroon;
+    font-size: 13pt;
 }
 
 thead>tr {
@@ -76,14 +82,17 @@ tfoot>tr {
     border-top: 4px solid #ddd;
 }
 
-tfoot td:nth-child(1) {
+tfoot td {
     font-weight: 600;
+    color: maroon;
+}
+
+tfoot td:nth-child(1) {
     text-align: right;
     letter-spacing: 2px;
 }
 
 tfoot td:nth-child(2) {
-    font-weight: 600;
     text-align: center;
 }
 
