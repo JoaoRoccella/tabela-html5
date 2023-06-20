@@ -46,6 +46,19 @@ th {
     padding: 15px 20px;
 }
 
+th {
+    text-align: start;
+}
+
+td:nth-child(2n-1) {
+    text-align: center;
+}
+
+th:last-child,
+td:last-child {
+    text-align: end;
+}
+
 thead>tr {
     border-bottom: 4px solid #ddd;
 }
@@ -76,5 +89,5 @@ tfoot td:nth-child(2) {
 
 button {
     padding: 10px 15px;
-    margin: 15px
+    margin: 15px;
 }
