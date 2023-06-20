@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João Marcos Roccella Alves">
+    <meta name="description" content="Um exemplo de tabela criada em HTML5">
+    <title>Tabela com HTML5</title>
+    <link id="estiloTabela" rel="stylesheet" href="style.css" disabled>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <h1>Construindo uma tabela</h1>
+    <table> <!-- table => tabela -->
+        <caption>Tabela 1 - Cadastros de funcionários</caption> <!-- legenda/título -->
+        <thead> <!-- thead => table head -->
+            <tr> <!-- tr => table row -->
+                <th>Nome</th> <!-- th => table header -->
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>CPF</th>
+                <th>CEP</th>
+            </tr>
+        </thead>
+        <tbody> <!-- tbody => table body -->
+            <tr>
+                <td>Thiago Hugo Marcelo Mendes</td> <!-- td => table data -->
+                <td>(11) 98918-6175</td>
+                <td>thiago.hugo.mendes@vegacon.com.br</td>
+                <td>957.389.812-86</td>
+                <td>08490-013</td>
+            </tr>
+            <tr>
+                <td>Mariane Silvana Liz Sales</td>
+                <td>(92) 99623-5712</td>
+                <td>mariane-sales72@rmsolutions.inf.br</td>
+                <td>712.345.686-67</td>
+                <td>69079-250</td>
+            </tr>
+            <tr>
+                <td>Maitê Olivia Nina Aparício</td>
+                <td>(66) 98862-9157</td>
+                <td>maite-aparicio94@mourafiorito.com</td>
+                <td>686.880.653-14</td>
+                <td>78559-092</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Quantidade Total</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <button type="button" id="botaoEstilo">Aplica estilo</button>
+    <script>
+        function alteraEstiloTabela() {
+            const link = document.querySelector('#estiloTabela');
+            const botao = document.querySelector('#botaoEstilo');
+            
+            if(link.hasAttribute('disabled')) {
+                link.removeAttribute('disabled');
+                botao.innerHTML = "Remove estilo";
+                
+            } else {
+                link.setAttribute('disabled', '');
+                botao.innerHTML = "Aplica estilo";
+            }
+        }
+
+        document.querySelector('#botaoEstilo').addEventListener('click', alteraEstiloTabela);
+    </script>
+</body>
+</html>
