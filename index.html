@@ -6,59 +6,68 @@
     <meta name="author" content="João Marcos Roccella Alves">
     <meta name="description" content="Um exemplo de tabela criada em HTML5">
     <title>Tabela com HTML5</title>
-    <link id="estiloTabela" rel="stylesheet" href="style.css" disabled>
-    <script>
-        
-    </script>
+    <link rel="stylesheet" href="style.css" id="linkEstilos">
 </head>
 <body>
     <h1>Construindo uma tabela</h1>
-    <table> <!-- table => tabela -->
-        <caption>Tabela 1 - Cadastros de funcionários</caption> <!-- legenda/título -->
-        <thead> <!-- thead => table head -->
-            <tr> <!-- tr => table row -->
-                <th>Nome</th> <!-- th => table header -->
-                <th>Telefone</th>
-                <th>E-mail</th>
-                <th>CPF</th>
-                <th>CEP</th>
+    <table> 
+        <caption>Resumo do seu pedido realizado em 20 de junho de 2023</caption>
+        <thead> <!-- cabeçalho da tabela -->
+            <tr> <!-- table row => linha -->
+                <th> <!-- table heading => cabeçalhos -->
+                    sku produto
+                </th>
+                <th>descrição do produto</th>
+                <th>quantidade</th>
+                <th>valor</th>
             </tr>
         </thead>
-        <tbody> <!-- tbody => table body -->
+
+        <tbody> <!-- corpo da tabela -->
             <tr>
-                <td>Thiago Hugo Marcelo Mendes</td> <!-- td => table data -->
-                <td>(11) 98918-6175</td>
-                <td>thiago.hugo.mendes@vegacon.com.br</td>
-                <td>957.389.812-86</td>
-                <td>08490-013</td>
+                <td> <!-- table data => dados da tabela -->
+                    654654654
+                </td>
+                <td>Sapato masculino marrom Manhattan</td>
+                <td>1</td>
+                <td>200.00</td>
             </tr>
+
             <tr>
-                <td>Mariane Silvana Liz Sales</td>
-                <td>(92) 99623-5712</td>
-                <td>mariane-sales72@rmsolutions.inf.br</td>
-                <td>712.345.686-67</td>
-                <td>69079-250</td>
+                <td>654654654</td>
+                <td>Sapato feminio branco New York</td>
+                <td>1</td>
+                <td>350.00</td>
             </tr>
+
             <tr>
-                <td>Maitê Olivia Nina Aparício</td>
-                <td>(66) 98862-9157</td>
-                <td>maite-aparicio94@mourafiorito.com</td>
-                <td>686.880.653-14</td>
-                <td>78559-092</td>
+                <td>987987987</td>
+                <td>Sapato masculino infantil New Jersey</td>
+                <td>1</td>
+                <td>250.00</td>
+            </tr>
+
+            <tr>
+                <td>131321321</td>
+                <td>Sapato feminino infantil Long Island</td>
+                <td>1</td>
+                <td>200.00</td>
             </tr>
         </tbody>
-        <tfoot>
+
+        <tfoot> <!-- rodapé da tabela -->
             <tr>
-                <td colspan="4">Quantidade Total</td>
-                <td>3</td>
+                <td colspan="3">TOTAL</td>
+
+                <td>1000.00</td>
             </tr>
         </tfoot>
+
     </table>
     <button type="button" id="botaoEstilo">Aplica estilo</button>
     <script>
-        function alteraEstiloTabela() {
-            const link = document.querySelector('#estiloTabela');
-            const botao = document.querySelector('#botaoEstilo');
+        function toggleEstilos() {
+            const link = document.querySelector('#linkEstilos');
             
             if(link.hasAttribute('disabled')) {
                 link.removeAttribute('disabled');
@@ -70,7 +79,8 @@
             }
         }
 
-        document.querySelector('#botaoEstilo').addEventListener('click', alteraEstiloTabela);
+        const botao = document.querySelector('#botaoEstilo');
+        botao.addEventListener('click', toggleEstilos);
     </script>
 </body>
 </html>
