@@ -65,7 +65,11 @@ td:nth-child(4) {
     font-size: 13pt;
 }
 
-thead>tr {
+thead>tr:first-child {
+    border-bottom: 2px dotted #ddd;
+}
+
+thead>tr:last-child {
     border-bottom: 4px solid #ddd;
 }
 
