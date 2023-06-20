@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #3f3f47;
+    transition: background .5s;
 }
 
 h1 {
@@ -31,6 +32,7 @@ caption {
     caption-side: bottom;
     margin-top: 20px;
     color:#fff;
+    transition: color .5s;
 }
 
 tbody>tr:nth-child(odd) {
