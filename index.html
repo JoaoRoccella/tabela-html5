@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <link rel="stylesheet" href="lightStyle.css" id="lightStyle" disabled>
+    <link rel="stylesheet" href="darkStyle.css" id="darkStyle">
+</head>
+
+<body>
+    <table> <!-- tabela -->
+        <caption>
+            Resumo do seu pedido, realizado em 20 de junho de 2023
+        </caption>
+        <thead>
+            <tr>
+                <th colspan="4" class="titulo-tabela">Produtos do pedido</td>
+            </tr>
+            <tr> <!-- table row => linha -->
+                <th> <!-- table heading => cabeçalhos -->
+                    sku produto
+                </th>
+                <th>descrição do produto</th>
+                <th>quantidade</th>
+                <th>valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <!-- table data => dados da tabela -->
+                    654687984
+                </td>
+                <td>Sapato masculino marrom Manhattan</td>
+                <td>1</td>
+                <td>200.00</td>
+            </tr>
+    
+            <tr>
+                <td>654654654</td>
+                <td>Sapato feminino branco New York</td>
+                <td>1</td>
+                <td>350.00</td>
+            </tr>
+            <tr>
+                <td>987987987</td>
+                <td>Sapato masculino infantil New Jersey</td>
+                <td>1</td>
+                <td>250.00</td>
+            </tr>
+            <tr>
+                <td>131321321</td>
+                <td>Sapato feminino infantil Long Island</td>
+                <td>1</td>
+                <td>200.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">TOTAL</td>          
+                <td>1000.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button type="button" id="btnRemoveEstilos">Remover estilos</button>
+    <button type="button" id="btnAlternaEstilos">Tema escuro</button>
+    
+    
+    <script>
+
+        document.querySelector('#btnRemoveEstilos').addEventListener('click', () => {
+
+            const linksEstilos = document.querySelectorAll('[rel=stylesheet]');
+            
+            linksEstilos.forEach(link => {
+                link.setAttribute('disabled', '');
+            });
+
+            document.querySelector('#btnAlternaEstilos').innerHTML = 'Reaplicar estilos';
+
+        });
+        
+        document.querySelector('#btnAlternaEstilos').addEventListener('click', () => {
+            const lightStyle = document.querySelector('#lightStyle');
+            const darkStyle = document.querySelector('#darkStyle');
+            
+            if (lightStyle.hasAttribute('disabled')) {
+                lightStyle.removeAttribute('disabled');
+                darkStyle.setAttribute('disabled','');
+                document.querySelector('#btnAlternaEstilos').innerHTML = 'Tema escuro';
+            } else {
+                darkStyle.removeAttribute('disabled');
+                lightStyle.setAttribute('disabled','');
+                document.querySelector('#btnAlternaEstilos').innerHTML = 'Tema claro';
+            }
+        });
+        
+    </script>
+</body>
+
+</html>
