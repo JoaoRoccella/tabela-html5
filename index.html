@@ -64,18 +64,18 @@
         </tfoot>
 
     </table>
-    <button type="button" id="botaoEstilo">Aplica estilo</button>
+    <button type="button" id="botaoEstilo"Remove estilos</button>
     <script>
         function toggleEstilos() {
             const link = document.querySelector('#linkEstilos');
             
             if(link.hasAttribute('disabled')) {
                 link.removeAttribute('disabled');
-                botao.innerHTML = "Remove estilo";
+                botao.innerHTML = "Remove estilos";
                 
             } else {
                 link.setAttribute('disabled', '');
-                botao.innerHTML = "Aplica estilo";
+                botao.innerHTML = "Aplica estilos";
             }
         }
 
